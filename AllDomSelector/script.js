@@ -36,3 +36,20 @@ const turnGreen = document.querySelector('li');
 console.log(turnGreen);//it will print fist li element
 turnGreen.style.backgroundColor = 'green';
 turnGreen.style.padding = '10px';
+
+turnGreen.innerText = 'five';
+console.log(turnGreen);
+
+
+const tempClassList = document.getElementsByClassName('list-item');
+console.log(tempClassList);
+//for using map in HTMLCollection we have to change HTMLCollection into array
+const myConvertedArray = Array.from(tempClassList);
+console.log(myConvertedArray[0].style.color = 'red');
+
+//Now we can aslo use for each loop in HTMLCollection after converting
+myConvertedArray.forEach(function(li) {
+    li.style.color = "red";
+});
+
+
